@@ -1,0 +1,7 @@
+﻿@inherits UmbracoViewPage<v1370.MyFormModel>
+@{
+	Layout = null;
+}
+<h1>@Model.Name</h1>
+<p>Rendercontroller Model test property value: @Model.Test</p>
+@await Component.InvokeAsync("MyFormControllerMain")

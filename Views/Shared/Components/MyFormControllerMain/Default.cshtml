@@ -1,0 +1,13 @@
+﻿@using v1370
+@model v1370.MyViewComponentViewModel
+
+<div class="my-form">
+    <!-- Render form, or whatever content -->
+    <p>This is my ViewComponent output!</p>
+    <p>Viewcomponent Model test2 property value: @Model.Test2</p>
+    
+    @using(Html.BeginUmbracoForm<SecondaryFormController>(nameof(SecondaryFormController.MyTest), "Update")) 
+    {
+        <button type = "submit">Update</button>
+    }
+</div>
