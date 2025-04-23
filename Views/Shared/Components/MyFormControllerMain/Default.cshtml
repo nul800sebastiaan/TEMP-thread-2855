@@ -8,6 +8,20 @@
     
     @using(Html.BeginUmbracoForm<SecondaryFormController>(nameof(SecondaryFormController.MyTest), "Update")) 
     {
-        <button type = "submit">Update</button>
+        
+        @Html.HiddenFor(m => m.SomeHiddenField1)
+        @Html.HiddenFor(m => m.SomeHiddenField2)
+        @Html.HiddenFor(m => m.SomeHiddenField3)
+         
+    
+        <div>
+            @Html.DropDownListFor(m => m.MyDropDownList, Model.MyDropDownListItems,"-- Please select --")
+        </div>
+        
+        <div>
+            <h3>TextBox:</h3>
+            @Html.TextAreaFor(m => m.Test2)
+        </div>
+        <button type="submit">Update</button>
     }
 </div>

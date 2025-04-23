@@ -28,7 +28,7 @@ public class SecondaryFormController : SurfaceController
     [UnsupportedOSPlatform("browser")]
     public Task<IActionResult> MyTest(MyViewComponentViewModel model)
     {
-        throw new NotImplementedException("This is a test exception from the SecondaryFormController.");
+        throw new NotImplementedException("The submitted value for the MyDropDownList property is: " + model.MyDropDownList);
         // Do something! 
         return Task.FromResult<IActionResult>(CurrentUmbracoPage());
     }
