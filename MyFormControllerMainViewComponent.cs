@@ -27,4 +27,5 @@ public class MyViewComponentViewModel
     public object SomeHiddenField3 { get; set; }
     public string MyDropDownList { get; set; }
     public List<SelectListItem> MyDropDownListItems { get; set; }
+    public string Action { get; set; }
 }

@@ -6,7 +6,7 @@
     <p>This is my ViewComponent output!</p>
     <p>Viewcomponent Model test2 property value: @Model.Test2</p>
     
-    @using(Html.BeginUmbracoForm<SecondaryFormController>(nameof(SecondaryFormController.MyTest), "Update")) 
+    @using(Html.BeginUmbracoForm<SecondaryFormController>(nameof(SecondaryFormController.Update), "Update")) 
     {
         
         @Html.HiddenFor(m => m.SomeHiddenField1)
@@ -22,6 +22,16 @@
             <h3>TextBox:</h3>
             @Html.TextAreaFor(m => m.Test2)
         </div>
-        <button type="submit">Update</button>
+        
+        
+        <button formnovalidate name="@Html.NameFor(m => m.Action)"
+                value="@SecondaryFormController.ActionType.Cancel">
+            Back
+        </button>
+
+        <button name="@Html.NameFor(m => m.Action)"
+                value="@SecondaryFormController.ActionType.Submit">
+            Update
+        </button>
     }
 </div>
